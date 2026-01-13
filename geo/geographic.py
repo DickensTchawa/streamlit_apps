@@ -6,7 +6,7 @@ import streamlit as st
 import plotly.express as px
 
 st.set_page_config(layout='wide')
-df = pd.read_csv('india.csv')
+df = pd.read_csv('/geo/india.csv')
 
 list_of_states = list(df['State'].unique())
 list_of_states.insert(0,'Overall India')
