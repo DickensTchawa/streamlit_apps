@@ -29,7 +29,7 @@ col1,col2 = st.columns(2)
 with col1:
     st.markdown('### First Chart')
     fig1 = plt.figure()
-    sns.histplot(data=df,x='marital' ,y='age', palette='muted')
+    sns.barplot(data=df,x='marital' ,y='age', palette='muted')
     st.pyplot(fig1)
 
 with col2:
