@@ -34,4 +34,3 @@ if plot:
         fig = px.scatter_mapbox(df, lat='Latitude', lon='Longitude',
         size=primary, color=secondary, zoom=4, size_max=35, mapbox_style='open-street-map',
         width=1200, height=700, hover_name='District')
-        st.plotly_chart(fig,use_container_width=True)
