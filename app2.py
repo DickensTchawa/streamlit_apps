@@ -49,6 +49,7 @@ if st.button('Predire les Charges'):
     with st.spinner('Calcul en cours...'):
         prediction = model.predict(input_data)[0]
         time.sleep(1)
-    st.success("Predicrion Terminee")
+    st.success("Prediction Terminee")
     st.markdown(f"Charges Medicales estimees: **${round(prediction)}**")
     st.balloons()
+
