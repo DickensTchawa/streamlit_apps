@@ -10,7 +10,7 @@ import time
 with open('reg.pkl','rb') as file:
     model = pickle.load(file)
 
-st.title('Predicteur dde charges d assurances medicales')
+st.title('Predicteur de charges d assurances medicales')
 
 # Ajout d'une animation
 with st.spinner('Chargement du Modele....'):
@@ -50,7 +50,8 @@ if st.button('Predire les Charges'):
         prediction = model.predict(input_data)[0]
         time.sleep(1)
     st.success("Prediction Terminee")
-    st.markdown(f"<h2 style='text-align:center; color:brown;'>Charges Medicales estimees: **${round(prediction)}**</h2>")
+    st.markdown(f"<h2 style='text-align:center; color:brown;'>Charges Medicales estimees: **${round(prediction)}**</h2>",unsafe_allow_html=True)
     st.balloons()
+
 
 
